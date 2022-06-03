@@ -8,7 +8,7 @@ import {useMoralis, useMoralisWeb3Api} from "react-moralis"
 import TooltipText from '../components/TooltipText'
 
 
-const setting = () => {
+const Setting = () => {
   const inputFile = useRef(null);
   const inputProfileFile = useRef(null);
   const [pfps, setPfps] = useState([]);
@@ -259,4 +259,4 @@ const setting = () => {
   )
 }
 
-export default setting
+export default Setting

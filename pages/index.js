@@ -1,13 +1,14 @@
-import React,{ useState, useRef, useEffect } from 'react'
+import React from 'react'
+import { useState, useRef, useEffect } from 'react'
 import Link from 'next/link';
 import Styles from "../styles/home.module.css"
 import Layout from '../components/Layout'
 import { defaultImgs } from "../components/defaultImages"
 import { Icon, TextArea} from 'web3uikit'
 import TweetInFeed from '../components/TweetInFeed'
-import {useMoralis,useWeb3ExecuteFunction} from "react-moralis"
+import { useMoralis , useWeb3ExecuteFunction } from "react-moralis"
 
-const index = () => {
+const Index = () => {
   const {isInitialized, Moralis, isAuthenticated, account, user} = useMoralis();
   const [ProfilePicture, setProfilePicture] = useState(defaultImgs[0])
   const [UserName, setUserName] = useState(account)
@@ -174,4 +175,4 @@ const index = () => {
 };
 
 
-export default index
+export default Index

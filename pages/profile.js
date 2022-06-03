@@ -8,7 +8,7 @@ import { defaultImgs } from "../components/defaultImages"
 import {useMoralis} from "react-moralis"
 
 
-const profile = () => {
+const Profile = () => {
   const {isInitialized, Moralis, isAuthenticated, account, user} = useMoralis();
   const [ProfileBanner, setProfileBanner] = useState(defaultImgs[1])
   const [ProfilePicture, setProfilePicture] = useState(defaultImgs[0])
@@ -57,4 +57,4 @@ const profile = () => {
   )
 }
 
-export default profile
+export default Profile
