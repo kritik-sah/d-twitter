@@ -14,37 +14,37 @@ const Rightbar = () => {
         {
             name:"Next.js",
             img: nextImg,
-            link: "#"
+            link: "https://nextjs.org/"
         },
         {
             name:"React.js",
             img: reactImg,
-            link: "#"
+            link: "https://reactjs.org/"
         },
         {
             name:"Tailwind CSS",
             img: tailwindImg,
-            link: "#"
+            link: "https://tailwindcss.com/"
         },
         {
             name:"Solidity",
             img: solidityImg,
-            link: "#"
+            link: "https://docs.soliditylang.org/en/v0.8.14/"
         },
         {
             name:"Moralis",
             img: moralisImg,
-            link: "#"
+            link: "https://moralis.io/"
         },
         {
             name:"Web3uiKit",
             img: web3uikitImg,
-            link: "#"
+            link: "https://github.com/web3ui/web3uikit"
         },
         {
             name:"Remix IDE",
             img: remixImg,
-            link: "#"
+            link: "https://remix.ethereum.org/"
         },
     ];
   return (
@@ -66,16 +66,16 @@ const Rightbar = () => {
 
         <div className={Styles.trends}>
             Tools Used!
-            {tools.map((e)=>{
+            {tools.map((e,i)=>{
                 return(
-                    <>
-                    <div className={Styles.trend} onClick={() => {window.open(e.link)}}>
+                    
+                    <div key={i} className={Styles.trend} onClick={() => {window.open(e.link)}}>
                         <img src={e.img.src} className={Styles.trendImg} alt={e.name}/>
-                        <div className={Styles.trendText}>
+                        <div className={Styles.trendText +" hidden md:block"}>
                             {e.name}
                         </div>
                     </div>
-                    </>
+                    
                 )
             })}
         </div>

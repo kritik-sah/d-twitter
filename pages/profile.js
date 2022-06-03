@@ -20,7 +20,7 @@ const profile = () => {
     if(isInitialized && isAuthenticated){
       const user = Moralis.User.current();
       setProfileBanner(user.attributes.userBanner ? user.attributes.userBanner: defaultImgs[1]);
-      setProfilePicture(user.attributes.userProfilePic ? user.attributes.userProfilePic: defaultImgs[0]);
+      setProfilePicture(user.attributes.pfp? user.attributes.pfp: user.attributes.userProfilePic ? user.attributes.userProfilePic: defaultImgs[0]);
       setUserName(user.attributes.userName ? user.attributes.userName: account);
       setUserBio(user.attributes.userBio ? user.attributes.userBio: "");
       setUserWallet(user.attributes.ethAddress.slice(0,4) +"..."+ user.attributes.ethAddress.slice(38));
@@ -51,7 +51,7 @@ const profile = () => {
             </div>
           </div>
         </section>
-        <TweetInFeed profilr={true} />
+        <TweetInFeed profile={true} />
       </Layout>
       </>
   )

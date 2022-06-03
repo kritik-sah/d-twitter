@@ -11,14 +11,18 @@ const Layout = (props) => {
     <>
     {isAuthenticated? (
         <div className="page ">
-        <div className="sideBar  hidden lg:block">
+        <div className="sideBar lg:block">
           <Sidebar />
-          <div className="logout" onClick={() => { 
+          <div className="m-0 mr-28 logout" onClick={() => { 
             Moralis.User.logOut().then(() => {
               window.location.reload();
             });
           }}>
-            Logout
+            <Icon fill="#ffffff" size={20} svg="logOut"/> 
+            <span className="hidden md:block">
+             &nbsp;Logout
+            </span>
+            
           </div>
         </div>
         <div className="mainWindow w-screen">

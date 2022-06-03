@@ -23,7 +23,7 @@
   .sideBar {
     position: sticky;
     top: 0px;
-    width: calc((100vw - 800px)*0.45);
+    width: 25%;
     border-right: 1px solid rgb(63, 63, 63);
     color: white;
     height: 100vh;
@@ -32,14 +32,15 @@
   .rightBar {
     position: sticky;
     top: 0px;
-    width: calc((100vw - 800px)*0.55);
+    width: 30%;
     border-left: 1px solid rgb(63, 63, 63);
     color: white;
     height: 100vh;
   }
   
   .mainWindow {
-    width: 800px;
+    min-width:45%;
+    
   }
   
   /* Text Field */
