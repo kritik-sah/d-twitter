@@ -1,5 +1,5 @@
 import React from 'react';
-import Styles from "./rightbar.module.css";
+import Styles from "./Rightbar.module.css";
 import { Input } from 'web3uikit';
 import nextImg from "../images/next.png";
 import reactImg from "../images/react.png";

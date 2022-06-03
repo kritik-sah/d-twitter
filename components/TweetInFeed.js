@@ -1,5 +1,5 @@
 import React,{ useState, useEffect } from 'react'
-import Styles from "./tweetinfeed.module.css"
+import Styles from "./Tweetinfeed.module.css"
 import {defaultImgs} from "../components/defaultImages"
 import TooltipText from '../components/TooltipText'
 import { Icon ,Tooltip} from 'web3uikit'

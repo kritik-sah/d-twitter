@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState, useRef, useEffect } from 'react'
 import Link from 'next/link';
-import Styles from "../styles/home.module.css"
+import Styles from "../styles/Home.module.css"
 import Layout from '../components/Layout'
 import { defaultImgs } from "../components/defaultImages"
 import { Icon, TextArea} from 'web3uikit'

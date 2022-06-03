@@ -2,7 +2,7 @@ import React,{ useState, useEffect } from 'react'
 import Link from 'next/link'
 import Layout from '../components/Layout'
 import TweetInFeed from '../components/TweetInFeed'
-import Styles from "../styles/profile.module.css"
+import Styles from "../styles/Profile.module.css"
 import { Icon} from 'web3uikit'
 import { defaultImgs } from "../components/defaultImages"
 import {useMoralis} from "react-moralis"

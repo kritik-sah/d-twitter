@@ -1,6 +1,6 @@
 import React, {useState , useRef, useEffect} from 'react'
 import Layout from '../components/Layout'
-import Styles from "../styles/setting.module.css"
+import Styles from "../styles/Setting.module.css"
 import { Button, Icon, Input, Tooltip,} from 'web3uikit'
 import { defaultImgs } from "../components/defaultImages"
 
