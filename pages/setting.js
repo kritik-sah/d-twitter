@@ -1,6 +1,6 @@
 import React, {useState , useRef, useEffect} from 'react'
 import Layout from '../components/Layout'
-import Styles from "../styles/Setting.module.css"
+import styles from "../styles/Setting.module.css"
 import { Button, Icon, Input, Tooltip,} from 'web3uikit'
 import { defaultImgs } from "../components/defaultImages"
 
@@ -139,9 +139,9 @@ const Setting = () => {
     <>
        <Layout>
        <div className="pageIdentify">Settings</div>
-        <section className={Styles.settingsPage}>
+        <section className={styles.settingsPage}>
         
-        <div className={Styles.pfp}>
+        <div className={styles.pfp}>
           Select your picture or Nft for profile!
           <div className="flex my-4 space-x-4">
           <Button
@@ -167,13 +167,13 @@ const Setting = () => {
                 />
             </Tooltip>
           </div>
-          <div className={Styles.pfpOptions + " mt-4"}>
+          <div className={styles.pfpOptions + " mt-4"}>
           <Tooltip
                 content={<TooltipText text="Upload you image"/>}
                 position="left"
               >
                 <img src={userProfile} alt="Nft profile picture" 
-            className={Styles.pfpOptionSelected}
+            className={styles.pfpOptionSelected}
             onClick={onProfileClick}/>
                 
             </Tooltip>
@@ -189,7 +189,7 @@ const Setting = () => {
               src={e}
               alt="Nft profile picture"
               className={
-                selectedPFP === e ? Styles.pfpOptionSelected : Styles.pfpOption
+                selectedPFP === e ? styles.pfpOptionSelected : styles.pfpOption
               }
               onClick={() => {setSelectedPFP(pfps[i]);}}
               ></img>
@@ -206,11 +206,11 @@ const Setting = () => {
           </div>
         </div>
 
-        <div className={Styles.pfp}>
+        <div className={styles.pfp}>
           Profile banner
           <img src={selectedFile} 
           onClick={onBannerClick}
-          className={Styles.banner + " w-full rounded-2xl mt-2"}/>
+          className={styles.banner + " w-full rounded-2xl mt-2"}/>
           
           <input type="file" name="file" ref={inputFile}
             onChange={changeHandler}
@@ -245,7 +245,7 @@ const Setting = () => {
           }}
         />
 
-        <div className={Styles.save +" !w-20 mb-10"}
+        <div className={styles.save +" !w-20 mb-10"}
           onClick={()=> {saveEdits()}}
         >
           Save

@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState, useRef, useEffect } from 'react'
 import Link from 'next/link';
-import Styles from "../styles/Home.module.css"
+import styles from "../styles/Home.module.css"
 import Layout from '../components/Layout'
 import { defaultImgs } from "../components/defaultImages"
 import { Icon, TextArea} from 'web3uikit'
@@ -128,12 +128,12 @@ const Index = () => {
     <>
       <Layout>
         <div className="pageIdentify">Home</div>
-        <section className={Styles.mainContent}>
-          <div className={Styles.profileTweet}>
+        <section className={styles.mainContent}>
+          <div className={styles.profileTweet}>
             <Link href="/profile">
-            <img src={ProfilePicture} alt={UserName +" Profile picture"} className={Styles.profilePic} />
+            <img src={ProfilePicture} alt={UserName +" Profile picture"} className={styles.profilePic} />
             </Link>
-            <div className={Styles.tweetBox + " mx-2"}>
+            <div className={styles.tweetBox + " mx-2"}>
               <TextArea
                 label=""
                 name="tweetTextArea"
@@ -146,20 +146,20 @@ const Index = () => {
               </TextArea>
 
               {selectedFile && (<>
-                <img src={selectedFile} className={Styles.tweetImg + " mt-4"} alt="selectedFile" />
+                <img src={selectedFile} className={styles.tweetImg + " mt-4"} alt="selectedFile" />
               </>)}
 
-              <div className={Styles.imgOrTweet + " mt-4"}>
-                <div className={Styles.imgDiv} onClick={onImgClick}>
+              <div className={styles.imgOrTweet + " mt-4"}>
+                <div className={styles.imgDiv} onClick={onImgClick}>
                   <input type="file" name="file" ref={inputFile}
                     onChange={changeHandler}
                     className="hidden">
                   </input>
                   <Icon fill="#ffffff" size={20} svg="image" />
                 </div>
-                <div className={Styles.tweetOptions} >
-                  <div className={Styles.tweet} onClick={saveTweet}>Tweet</div>
-                  <div className={Styles.tweet + " " + Homestyle.maticBtn} onClick={maticTweet}>
+                <div className={styles.tweetOptions} >
+                  <div className={styles.tweet} onClick={saveTweet}>Tweet</div>
+                  <div className={styles.tweet + " " + Homestyle.maticBtn} onClick={maticTweet}>
                     <Icon fill="#ffffff" size={20} svg="matic" />
                   </div>
                 </div>

@@ -2,7 +2,7 @@ import React,{ useState, useEffect } from 'react'
 import Link from 'next/link'
 import Layout from '../components/Layout'
 import TweetInFeed from '../components/TweetInFeed'
-import Styles from "../styles/Profile.module.css"
+import styles from "../styles/Profile.module.css"
 import { Icon} from 'web3uikit'
 import { defaultImgs } from "../components/defaultImages"
 import {useMoralis} from "react-moralis"
@@ -33,19 +33,19 @@ const Profile = () => {
        <Layout>
         <div className="pageIdentify">Profile</div>
         <section>
-          <img className={Styles.profileBanner} src={ProfileBanner} alt="profile banner Img"/>
-          <div className={Styles.pfpContainer}>
-            <img className={Styles.profilePFP} src={ProfilePicture} alt="Profile picture"/>
-            <div className={Styles.profileName}>{UserName}</div>
-            <div className={Styles.profileWallet}>{UserWallet}</div>
+          <img className={styles.profileBanner} src={ProfileBanner} alt="profile banner Img"/>
+          <div className={styles.pfpContainer}>
+            <img className={styles.profilePFP} src={ProfilePicture} alt="Profile picture"/>
+            <div className={styles.profileName}>{UserName}</div>
+            <div className={styles.profileWallet}>{UserWallet}</div>
             <Link href="/setting">
-            <div className={Styles.profileEdit}>Edit &nbsp; <Icon fill="#ffffff" size={20} svg="edit"/></div>
+            <div className={styles.profileEdit}>Edit &nbsp; <Icon fill="#ffffff" size={20} svg="edit"/></div>
             </Link>
-            <div className={Styles.profileBio}>
+            <div className={styles.profileBio}>
               {UserBio}
             </div>
-            <div className={Styles.profileTabs}>
-              <div className={Styles.profileTab}>
+            <div className={styles.profileTabs}>
+              <div className={styles.profileTab}>
                   Tweets
               </div>
             </div>
