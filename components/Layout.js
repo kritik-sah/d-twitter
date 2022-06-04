@@ -34,7 +34,9 @@ const Layout = (props) => {
       ) : (
       <div className="loginPage">
         <Icon fill="#ffffff" size={20} svg="twitter"/>
-        <ConnectButton></ConnectButton>
+        <span className="!bg-cyan-500 !text-gray-300 rounded-3xl">
+        <ConnectButton  signingMessage="Welcome to d-tweeter"></ConnectButton>
+        </span>
       </div>
     )}
     
