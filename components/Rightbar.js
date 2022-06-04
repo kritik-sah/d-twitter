@@ -1,5 +1,4 @@
 import React from 'react';
-import styles from "./Rightbar.module.css";
 import { Input } from 'web3uikit';
 import nextImg from "../images/next.png";
 import reactImg from "../images/react.png";
@@ -49,7 +48,7 @@ const Rightbar = () => {
     ];
   return (
     <>
-    <aside className={styles.rightbarContent +" mt-10"}>
+    <aside className="rightbarContent mt-10">
     <Input
         autoComplete
         autoFocus
@@ -64,14 +63,14 @@ const Rightbar = () => {
         type="text"
         />
 
-        <div className={styles.trends}>
+        <div className="trends">
             Tools Used!
             {tools.map((e,i)=>{
                 return(
                     
-                    <div key={i} className={styles.trend} onClick={() => {window.open(e.link)}}>
-                        <img src={e.img.src} className={styles.trendImg} alt={e.name}/>
-                        <div className={styles.trendText +" hidden md:block"}>
+                    <div key={i} className="trend" onClick={() => {window.open(e.link)}}>
+                        <img src={e.img.src} className="trendImg" alt={e.name}/>
+                        <div className="trendText hidden md:block">
                             {e.name}
                         </div>
                     </div>

@@ -1,5 +1,4 @@
 import React,{ useState, useEffect } from 'react'
-import styles from "./Tweetinfeed.module.css"
 import {defaultImgs} from "../components/defaultImages"
 import TooltipText from '../components/TooltipText'
 import { Icon ,Tooltip} from 'web3uikit'
@@ -37,12 +36,12 @@ const TweetInFeed = ({profile}) => {
         tweetArr?.map((e,i)=>{
             
             return(
-                 <div key={i} className={styles.feedTweet}>
-                    <img src={e.attributes.tweeterPfp? e.attributes.tweeterPfp :defaultImgs[0]} alt="Profile pic" className={styles.profilePic +" pe-2"} />
-                    <div className={styles.completeTweet}>
-                        <div className={styles.who}>
+                 <div key={i} className="feedTweet">
+                    <img src={e.attributes.tweeterPfp? e.attributes.tweeterPfp :defaultImgs[0]} alt="Profile pic" className="profilePic pe-2"/>
+                    <div className="completeTweet">
+                        <div className="who">
                             {e.attributes.tweeterUsername}
-                            <div className={styles.accWhen}>
+                            <div className="accWhen">
                                 {`
                                 ${e.attributes.tweeterAccount.slice(0,4)}...${e.attributes.tweeterAccount.slice(38)} | 
                                 ${e.attributes.createdAt.toLocaleString('en-us', {month:"short"})}
@@ -51,18 +50,18 @@ const TweetInFeed = ({profile}) => {
                                 `}
                             </div>
                         </div>
-                        <div className={styles.tweetContent}>
+                        <div className="tweetContent">
                             {e.attributes.tweetTxt? e.attributes.tweetTxt : ""}
-                            {e.attributes.tweetImg ? (<img src={e.attributes.tweetImg} alt="tweet img" className={styles.tweetImg + " mt-4 w-full"}/>) : ""
+                            {e.attributes.tweetImg ? (<img src={e.attributes.tweetImg} alt="tweet img" className="tweetImg  mt-4 w-full"/>) : ""
                             }
-                            {/* <img src={tweet1.src} alt="tweet img" className={styles.tweetImg + " mt-4 w-full"}/> */}
+                            {/* <img src={tweet1.src} alt="tweet img" className="tweetImg mt-4 w-full"/> */}
                         </div>
 
-                        <div className={styles.interactions + " mt-4"}>
+                        <div className="interactions mt-4">
                             
                             {e.attributes.tweetTxHash? (
                                 <a href={e.attributes.tweetTxHash} target="_blank" rel="noopener noreferrer">
-                                <div className={styles.interactionNums}>
+                                <div className="interactionNums">
                                 <Tooltip
                                     content={<TooltipText text="View this tweet on polygonscan"/>}
                                     position="right"

@@ -1,5 +1,5 @@
 import React,{ useState, useEffect } from 'react'
-import styles from "./Sidebar.module.css"
+
 import { Icon} from "web3uikit"
 import Link from 'next/link'
 import { defaultImgs } from "../components/defaultImages"
@@ -23,10 +23,10 @@ const Sidebar = () => {
   }, [isInitialized, isAuthenticated, account,user])
   return (
     <>
-    <aside className={styles.siderContent}>
-        <nav className={styles.menu}>
-            <Link href='/' className={styles.link}>
-            <div className={styles.details}>
+    <aside className="siderContent">
+        <nav className="menu">
+            <Link href='/' className="link">
+            <div className="details">
                 <Icon fill="#ffffff" size={33} svg="twitter"/>
                 <span className="hidden md:block">
 
@@ -34,8 +34,8 @@ const Sidebar = () => {
                 </span>
             </div>
             </Link>
-            <Link href='/' className={styles.link}>
-            <div className={styles.menuItems}>
+            <Link href='/' className="link">
+            <div className="menuItems">
                 <Icon fill="#ffffff" size={33} svg="list"/>
                 <span className="hidden md:block">
                   
@@ -43,8 +43,8 @@ const Sidebar = () => {
                 </span>
             </div>
             </Link>
-            <Link href='/profile' className={styles.link}>
-            <div className={styles.menuItems}>
+            <Link href='/profile' className="link">
+            <div className="menuItems">
                 <Icon fill="#ffffff" size={33} svg="user"/>
                 <span className="hidden md:block">
                   
@@ -52,8 +52,8 @@ const Sidebar = () => {
                 </span>
             </div>
             </Link>
-            <Link href='/setting' className={styles.link}>
-            <div className={styles.menuItems}>
+            <Link href='/setting' className="link">
+            <div className="menuItems">
                 <Icon fill="#ffffff" size={33} svg="cog"/>
                 <span className="hidden md:block">
                   
@@ -62,8 +62,8 @@ const Sidebar = () => {
             </div>
             </Link>
             <hr className='my-4'/>
-            <a href='https://github.com/kritik-sah/d-twitter' className={styles.link}>
-              <div className={styles.menuItems}>
+            <a href='https://github.com/kritik-sah/d-twitter' className="link">
+              <div className="menuItems">
                   <Icon fill="#ffffff" size={33} svg="github"/>
                   <span className="hidden md:block">
                   
@@ -71,8 +71,8 @@ const Sidebar = () => {
                 </span>
               </div>
             </a>
-            <a href='https://kritik.cryptolancer.in' className={styles.link}>
-              <div className={styles.menuItems}>
+            <a href='https://kritik.cryptolancer.in' className="link">
+              <div className="menuItems">
                   <Icon fill="#ffffff" size={33} svg="user"/>
                   <span className="hidden md:block">
                   
@@ -82,14 +82,14 @@ const Sidebar = () => {
             </a>
 
         </nav>
-        <Link href='/profile' className={styles.link}>
-        <div className={styles.details}>
+        <Link href='/profile' className="link">
+        <div className="details">
           <img src={ProfilePicture} className="profilePic !h-10 !w-10"></img>
-          <div className={styles.profile + " hidden md:block"}>
-            <div className={styles.who + " hidden md:block"}>
+          <div className="profile  hidden md:block">
+            <div className="who hidden md:block">
               {UserName}
             </div>
-            <div className={styles.accWhen + " hidden md:block"}>
+            <div className="accWhen hidden md:block">
               {UserWallet}
             </div>
           </div>
